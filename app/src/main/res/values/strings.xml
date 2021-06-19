@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LawBook</string>
+    <string name="text_login_mobile_number">Mobile Number</string>
+    <string name="info_login_caption_header">We need to send OTP to authenticate your number</string>
+    <string name="button_text_submit">Submit</string>
+    <string name="hint_mobile_number">Mobile Number</string>
+</resources>
