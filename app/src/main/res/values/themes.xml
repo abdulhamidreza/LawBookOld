@@ -2,16 +2,22 @@
     <!-- Base application theme. -->
     <style name="Theme.LawBook" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red_500</item>
-        <item name="colorPrimaryVariant">@color/red_500</item>
-        <item name="colorOnPrimary">@color/red_500</item>
+        <item name="colorPrimary">@color/secondaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/secondaryDarkColor</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/red_500</item>
-        <item name="colorSecondaryVariant">@color/red_500</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/primaryLightColor</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnPrimary</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.LawBook.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.LawBook.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.LawBook.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

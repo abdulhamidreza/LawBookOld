@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "791688503383",
+    "firebase_url": "https://law-book-fc2f1-default-rtdb.firebaseio.com",
+    "project_id": "law-book-fc2f1",
+    "storage_bucket": "law-book-fc2f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791688503383:android:0c9fbfdde5bbd009acc312",
+        "android_client_info": {
+          "package_name": "com.lb.lawbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791688503383-3dtmm4r4184jsh62nn5dvl260qrsks9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr9sYbUL5LOIrBYs-Khl8xIO2hPX2yr4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791688503383-3dtmm4r4184jsh62nn5dvl260qrsks9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
