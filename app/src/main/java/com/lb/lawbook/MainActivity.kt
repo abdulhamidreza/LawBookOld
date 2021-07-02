@@ -11,10 +11,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import com.lb.lawbook.data.ui.pojos.Address
+import com.lb.lawbook.pojos.Address
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.ArrayList
-import java.util.HashMap
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             if (auth != null) {
                 Firebase.auth.signOut()
                 Intent(this, LoginActivity::class.java)
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
             }
         })

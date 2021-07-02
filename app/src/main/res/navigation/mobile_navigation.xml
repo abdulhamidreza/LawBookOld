@@ -22,4 +22,12 @@
         android:name="com.lb.lawbook.data.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_sign_out"
+        android:name="com.lb.lawbook.data.ui.signout.SignOutFragment"
+        android:label="@string/menu_sign_out"
+        tools:layout="@layout/sign_out_fragment" />
+
+
 </navigation>

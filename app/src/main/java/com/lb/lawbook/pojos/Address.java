@@ -1,4 +1,4 @@
-package com.lb.lawbook.data.ui.pojos;
+package com.lb.lawbook.pojos;
 
 public class Address {
     private String address_type;
