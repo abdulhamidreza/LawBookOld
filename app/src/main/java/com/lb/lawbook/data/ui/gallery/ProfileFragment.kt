@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.lb.lawbook.R
 
-class GalleryFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-  private lateinit var galleryViewModel: GalleryViewModel
+  private lateinit var profileViewModel: ProfileViewModel
 
   override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
+          inflater: LayoutInflater,
+          container: ViewGroup?,
+          savedInstanceState: Bundle?
   ): View? {
-    galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
-    val root = inflater.inflate(R.layout.fragment_gallery, container, false)
+    profileViewModel =
+            ViewModelProvider(this).get(ProfileViewModel::class.java)
+    val root = inflater.inflate(R.layout.fragment_profile, container, false)
     val textView: TextView = root.findViewById(R.id.text_gallery)
-    galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+    profileViewModel.text.observe(viewLifecycleOwner, Observer {
       textView.text = it
     })
     return root
