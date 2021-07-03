@@ -11,9 +11,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import com.lb.lawbook.pojos.Address
-import kotlinx.android.synthetic.main.fragment_profile.*
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+/*
     fun insertUserDocument() {
         val userName: MutableMap<String, Any> =
             HashMap() //As a Map data type first, middle, and last name
@@ -93,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         val documentRef = db.collection("users").document(auth?.uid.toString())
         documentRef.set(user)
     }
+*/
 
     fun readDataOwnData() {
         //It's point to document so we can get data fields
@@ -121,7 +120,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun insetToFB(view: View) {
-        insertUserDocument()
+        //  insertUserDocument()
     }
 
     fun readFromFB(view: View) {

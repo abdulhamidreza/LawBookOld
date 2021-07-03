@@ -7,8 +7,260 @@
     tools:context=".data.ui.gallery.ProfileFragment">
 
     <ScrollView
+        android:id="@+id/scrollViewShow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="6dp"
+                android:padding="8dp"
+                android:text="Personal details"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/show_fname_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="First Name" />
+
+            <TextView
+                android:id="@+id/show_mname_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Middle Name" />
+
+            <TextView
+                android:id="@+id/show_lname_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Last Name" />
+
+            <TextView
+                android:id="@+id/show_age_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Age" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="6dp"
+                android:padding="8dp"
+                android:text="Profesonal details"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/show_y_of_exp_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Year Of Exp" />
+
+            <TextView
+                android:id="@+id/show_field_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Field of Practice" />
+
+            <TextView
+                android:id="@+id/show_no_of_cases_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="No Of cases" />
+
+            <TextView
+                android:id="@+id/show_digree_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Digree" />
+
+            <TextView
+                android:id="@+id/show_bar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Bar Name" />
+
+            <TextView
+                android:id="@+id/show_registration_no_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Bar reg No" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="6dp"
+                android:padding="8dp"
+                android:text="Home Address"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/show_house_no_txt_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="House No" />
+
+            <TextView
+                android:id="@+id/show_street_txt_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Street Name" />
+
+            <TextView
+                android:id="@+id/show_city_txt_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="City" />
+
+            <TextView
+                android:id="@+id/show_pin_txt_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Pin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="6dp"
+                android:padding="8dp"
+                android:text="Office Address 1"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/show_house_no_txt_off1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="House No" />
+
+            <TextView
+                android:id="@+id/show_street_txt_off1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Street Name" />
+
+            <TextView
+                android:id="@+id/show_city_txt_off1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="City" />
+
+            <TextView
+                android:id="@+id/show_pin_txt_off1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Pin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="6dp"
+                android:padding="8dp"
+                android:text="Office Address 2"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/show_house_no_txt_off2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="House No" />
+
+            <TextView
+                android:id="@+id/show_street_txt_off2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Street Name" />
+
+            <TextView
+                android:id="@+id/show_city_txt_off2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="City" />
+
+            <TextView
+                android:id="@+id/show_pin_txt_off2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Pin" />
+
+            <Button
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/primaryDarkColor"
+                android:padding="8dp"
+                android:text="Edit Profile"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -239,19 +491,40 @@
                 android:layout_marginTop="6dp"
                 android:hint="Pin" />
 
-            <Button
-                android:id="@+id/save_profile_btn"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/primaryDarkColor"
-                android:padding="8dp"
-                android:text="Save"
-                android:textAlignment="center"
-                android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save_profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/primaryDarkColor"
+                    android:padding="8dp"
+                    android:text="Save"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/cancel_profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/primaryDarkColor"
+                    android:padding="8dp"
+                    android:text="Cancel"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
