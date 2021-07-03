@@ -30,10 +30,11 @@ class ServicesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_services_list, container, false)
+        val viewR = view.findViewById<RecyclerView>(R.id.recycleView_services)
 
         // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
+        if (viewR is RecyclerView) {
+            with(viewR) {
                 layoutManager = when {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
