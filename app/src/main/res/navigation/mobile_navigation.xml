@@ -33,7 +33,17 @@
         android:id="@+id/nav_services"
         android:name="com.lb.lawbook.data.ui.services.ServicesFragment"
         android:label="My Services"
-        tools:layout="@layout/fragment_services_list" />
+        tools:layout="@layout/fragment_services_list">
+        <action
+            android:id="@+id/action_nav_services_to_serviceDetailFragment"
+            app:destination="@id/service_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/service_detail_fragment"
+        android:name="com.lb.lawbook.data.ui.services.ServiceDetailFragment"
+        android:label="Add Service Details"
+        tools:layout="@layout/fragment_service_detail" />
 
 
 </navigation>

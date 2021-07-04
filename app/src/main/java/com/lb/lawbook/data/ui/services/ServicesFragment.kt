@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lb.lawbook.R
+import kotlinx.android.synthetic.main.fragment_services_list.*
+
 
 /**
  * A fragment representing a list of Items.
@@ -45,6 +48,15 @@ class ServicesFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+        add_new_service_btn.setOnClickListener { navController.navigate(R.id.action_nav_services_to_serviceDetailFragment) }
+
+    }
+
     companion object {
 
         // TODO: Customize parameter argument names
@@ -53,7 +65,7 @@ class ServicesFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            ServicesFragment().apply {
+                ServicesFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
