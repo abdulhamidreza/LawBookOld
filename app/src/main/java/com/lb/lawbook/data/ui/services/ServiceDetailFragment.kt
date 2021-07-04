@@ -59,7 +59,7 @@ class ServiceDetailFragment : Fragment() {
             for (i in 0 until arrayLang.size) {
                 val checked = arrayChecked[i]
                 if (checked) {
-                    lang_list_textView.text = "${lang_list_textView.text}  ${arrayLang[i]} \n"
+                    lang_list_textView.text = "${lang_list_textView.text}  ${arrayLang[i]} " + ", "
                 }
             }
         }
