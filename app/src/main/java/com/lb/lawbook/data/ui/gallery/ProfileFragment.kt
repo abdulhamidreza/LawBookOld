@@ -30,6 +30,7 @@ class ProfileFragment : Fragment() {
         profileViewModel =
                 ViewModelProvider(this).get(ProfileViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_profile, container, false)
+        val documentRef = db.collection("users").document(auth?.uid.toString())
         profileViewModel.readDataOwnData().observe(viewLifecycleOwner, Observer {
             if (it != null) {
                 val name = it.get("name") as HashMap<String, Any>

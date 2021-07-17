@@ -159,7 +159,7 @@ class LoginActivity : AppCompatActivity() {
             TimeUnit.SECONDS,  // third parameter is for initializing units
             // for time period which is in seconds in our case.
             this,  // this task will be excuted on Main thread.
-            mCallBack // we are calling callback method when we recieve OTP for
+                mCallBack // we are calling callback method when we recieve OTP for
             // auto verification of user.
         )
     }
