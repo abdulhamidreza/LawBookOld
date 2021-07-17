@@ -47,9 +47,9 @@ class LoginActivity : AppCompatActivity() {
         // of our FirebaseAuth.
         mAuth = FirebaseAuth.getInstance()
         if (mAuth.currentUser != null) {
-            intent = Intent(this, NavigationActivity::class.java)
+            intent = Intent(this, HomeActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(Intent(this, NavigationActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         } else {
             // initializing variables for button and Edittext.
@@ -172,7 +172,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // if the code is correct and the task is successful
                     // we are sending our user to new activity.
-                    val i = Intent(this@LoginActivity, NavigationActivity::class.java)
+                    val i = Intent(this@LoginActivity, HomeActivity::class.java)
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(i)
                     finish()

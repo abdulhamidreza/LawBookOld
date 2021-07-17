@@ -12,17 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LawBook">
+        <activity android:name=".profile.ProfileAddressActivity"></activity>
+        <activity android:name=".profile.ProfileProfessionalActivity" />
+        <activity android:name=".profile.ProfileBasicInfoActivity" />
+        <activity android:name=".profile.ProfileActivity" />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".data.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.LawBook.NoActionBar" />
-
         <activity android:name=".LoginActivity">
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>

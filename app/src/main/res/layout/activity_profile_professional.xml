@@ -2,8 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp">
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/button_profile_professional_info_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ic_keyboard_back" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView_profile_name"
@@ -11,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:text="Abdul Hamid"
+        android:text="Dr. Babasaheb Ambedkar"
         android:textAppearance="@android:style/TextAppearance.Material.Headline"
         android:textStyle="bold" />
 
@@ -20,17 +27,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
         android:layout_margin="8dp"
-        android:text="Criminal Layer"
+        android:text="chief architect of Indian constitution"
         android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="House No">
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Years of Experience">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_profile_address_hpuse_no"
+            android:id="@+id/editText_profile_years_experience"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -39,11 +50,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:hint="Street Name">
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Expertise Field">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_profile_address_street_name"
+            android:id="@+id/editText_expertise_field"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -52,11 +65,28 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:hint="City">
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="NO of Casese">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_profile_address_city"
+            android:id="@+id/editText_profile_no_cases"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Degree">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_profile_degree"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -65,11 +95,28 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:hint="Pin Code">
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Bar Name">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_profile_address_pin_code"
+            android:id="@+id/editText_profile_bar_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Bar Registration No">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_profile_bar_registration_no"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -80,7 +127,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Update"
         android:textColor="@color/primaryColor" />
 
