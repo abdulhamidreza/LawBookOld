@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_profile"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:elevation="16dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/sample_profile_" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Abdul Hamid"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_designation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:text="Criminal Layer"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_basic_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@drawable/ic_account"
+        android:drawableEnd="@drawable/ic_navigate_next"
+        android:drawablePadding="16dp"
+        android:text="Basic Info"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_professional_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="64dp"
+        android:drawableStart="@drawable/ic_account"
+        android:drawableEnd="@drawable/ic_navigate_next"
+        android:drawablePadding="16dp"
+        android:text="Professional Info"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_myAddress_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="64dp"
+        android:drawableStart="@drawable/ic_account"
+        android:drawableEnd="@drawable/ic_navigate_next"
+        android:drawablePadding="16dp"
+        android:text="My Addresses"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_profile_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="64dp"
+        android:drawableStart="@drawable/ic_account"
+        android:drawableEnd="@drawable/ic_navigate_next"
+        android:drawablePadding="16dp"
+        android:text="Logout"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryTextColor" />
+
+
+</LinearLayout>
