@@ -15,10 +15,12 @@
 
     <ImageView
         android:id="@+id/profileImageView"
+        android:clickable="true"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:padding="8dp"
+        android:focusable="true"
         android:contentDescription="@string/nav_header_desc"
+        android:foreground="@drawable/profile_fore_ground"
         app:srcCompat="@mipmap/ic_profile_placeholder" />
 
     <TextView

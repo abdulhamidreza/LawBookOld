@@ -32,20 +32,27 @@ class ProfileFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_profile, container, false)
         profileViewModel.readDataOwnData().observe(viewLifecycleOwner, Observer {
             if (it != null) {
-                val name = it.get("name") as HashMap<String, Any>
-                name.let {
-                    show_fname_txt.text = show_fname_txt.text.toString() + name.get("first")
-                    show_mname_txt.text = show_mname_txt.text.toString() + name.get("middle")
-                    show_lname_txt.text = show_lname_txt.text.toString() + name.get("last")
-                }
-                val career = it.get("career") as HashMap<String, Any>
-                career.let {
-                    show_y_of_exp_txt.text = show_y_of_exp_txt.text.toString() + career.get("y_of_exp")
-                    show_field_txt.text = show_field_txt.text.toString() + career.get("field")
-                    show_no_of_cases_txt.text = show_no_of_cases_txt.text.toString() + career.get("no_of_cases")
-                    show_digree_txt.text = show_digree_txt.text.toString() + career.get("digree")
-                    show_bar_txt.text = show_bar_txt.text.toString() + career.get("bar")
-                    show_registration_no_txt.text = show_registration_no_txt.text.toString() + career.get("registration_no")
+                try {
+                    val name = it.get("name") as HashMap<String, Any>
+                    name.let {
+                        show_fname_txt.text = show_fname_txt.text.toString() + name.get("first")
+                        show_mname_txt.text = show_mname_txt.text.toString() + name.get("middle")
+                        show_lname_txt.text = show_lname_txt.text.toString() + name.get("last")
+                    }
+                    val career = it.get("career") as HashMap<String, Any>
+                    career.let {
+                        show_y_of_exp_txt.text =
+                            show_y_of_exp_txt.text.toString() + career.get("y_of_exp")
+                        show_field_txt.text = show_field_txt.text.toString() + career.get("field")
+                        show_no_of_cases_txt.text =
+                            show_no_of_cases_txt.text.toString() + career.get("no_of_cases")
+                        show_digree_txt.text =
+                            show_digree_txt.text.toString() + career.get("digree")
+                        show_bar_txt.text = show_bar_txt.text.toString() + career.get("bar")
+                        show_registration_no_txt.text =
+                            show_registration_no_txt.text.toString() + career.get("registration_no")
+                    }
+                } catch (e: Exception) {
                 }
             } else {
                 scrollViewEdit.visibility = VISIBLE
