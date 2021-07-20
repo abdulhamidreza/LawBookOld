@@ -40,93 +40,85 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="8dp"
-        android:textColor="@android:color/black"
         android:text="chief architect of Indian constitution"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/primaryTextColor" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_profile_basic_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_account"
         android:drawableEnd="@drawable/ic_navigate_next"
         android:drawablePadding="16dp"
+        android:gravity="center_vertical"
         android:text="Basic Info"
         android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/primaryTextColor" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_profile_professional_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_account"
         android:drawableEnd="@drawable/ic_navigate_next"
         android:drawablePadding="16dp"
+        android:gravity="center_vertical"
         android:text="Professional Info"
         android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/primaryTextColor" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_profile_myAddress_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_account"
         android:drawableEnd="@drawable/ic_navigate_next"
         android:drawablePadding="16dp"
+        android:gravity="center_vertical"
         android:text="My Addresses"
         android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/primaryTextColor" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_profile_logout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_account"
         android:drawableEnd="@drawable/ic_navigate_next"
         android:drawablePadding="16dp"
+        android:gravity="center_vertical"
         android:text="Logout"
         android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/primaryTextColor" />
-
 
 </LinearLayout>
