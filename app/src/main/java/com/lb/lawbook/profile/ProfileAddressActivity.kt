@@ -30,7 +30,7 @@ class ProfileAddressActivity : AppCompatActivity() {
             if (it != null) {
                 try {
                     mBinding.editTextProfileAddressHouseNo.setText(it.get("house_no").toString())
-                    mBinding.editTextProfileAddressStreetName.setText(it.get("street").toString())
+                    mBinding.editTextProfileAddressStreetName.setText(it.get("street")?.toString())
                     mBinding.editTextProfileAddressCity.setText(it.get("city").toString())
                     mBinding.editTextProfileAddressPinCode.setText(it.get("pin").toString())
 
@@ -47,16 +47,16 @@ class ProfileAddressActivity : AppCompatActivity() {
     }
 
     fun insertUserDocument() {
-        val houseNo = mBinding.editTextProfileAddressHouseNo.text.toString()
-        val street = mBinding.editTextProfileAddressStreetName.text.toString()
-        val city = mBinding.editTextProfileAddressCity.text.toString()
-        val pin = mBinding.editTextProfileAddressPinCode.text.toString()
+        val houseNo = mBinding.editTextProfileAddressHouseNo.text
+        val street = mBinding.editTextProfileAddressStreetName.text
+        val city = mBinding.editTextProfileAddressCity.text
+        val pin = mBinding.editTextProfileAddressPinCode.text
 
         val basicInfo: MutableMap<String, Any> = HashMap()
-        basicInfo.put("house_no", houseNo)
-        basicInfo.put("street", street)
-        basicInfo.put("city", city)
-        basicInfo.put("pin", pin)
+        basicInfo.put("house_no", houseNo!!)
+        basicInfo.put("street", street!!)
+        basicInfo.put("city", city!!)
+        basicInfo.put("pin", pin!!)
         val documentRef = db.collection("users").document(auth?.uid.toString())
         documentRef.set(basicInfo)
     }

@@ -51,20 +51,20 @@ class ProfileBasicInfoActivity : AppCompatActivity() {
     }
 
     fun insertUserDocument() {
-        val userName = mBinding.editTextUserName.text.toString()
-        val firstName = mBinding.editTextFirstName.text.toString()
-        val lastName = mBinding.editTextLastName.text.toString()
-        val email = mBinding.editTextEmail.text.toString()
-        val age = mBinding.editTextAge.text.toString()
-        val gender = mBinding.textViewGender.text.toString()
+        val userName = mBinding.editTextUserName.text
+        val firstName = mBinding.editTextFirstName.text
+        val lastName = mBinding.editTextLastName.text
+        val email = mBinding.editTextEmail.text
+        val age = mBinding.editTextAge.text
+        val gender = mBinding.textViewGender.text
 
         val basicInfo: MutableMap<String, Any> = HashMap()
-        basicInfo.put("user_name", userName)
+        basicInfo.put("user_name", userName!!)
         basicInfo.put("number", auth?.phoneNumber.toString())
-        basicInfo.put("first", firstName)
-        basicInfo.put("last", lastName)
-        basicInfo.put("email", email)
-        basicInfo.put("age", age)
+        basicInfo.put("first", firstName!!)
+        basicInfo.put("last", lastName!!)
+        basicInfo.put("email", email!!)
+        basicInfo.put("age", age!!)
         basicInfo.put("gender", gender)
         val documentRef = db.collection("users").document(auth?.uid.toString())
         documentRef.set(basicInfo)
