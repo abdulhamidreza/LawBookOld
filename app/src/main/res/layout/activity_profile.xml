@@ -1,76 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/button_profile_back"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/ic_keyboard_back" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
-        app:srcCompat="@drawable/ic_profile_sample"
-        app:strokeColor="@android:color/black"
-        app:strokeWidth="5dp" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="Dr. Babasaheb Ambedkar"
-        android:textAppearance="@android:style/TextAppearance.Material.Headline"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_profile_designation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        android:text="chief architect of Indian constitution"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium"
-        android:textColor="@android:color/black" />
-
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/primaryTextColor" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_profile_basic_info"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:drawableStart="@drawable/ic_account"
-        android:drawableEnd="@drawable/ic_navigate_next"
-        android:drawablePadding="16dp"
-        android:gravity="center_vertical"
-        android:text="Basic Info"
-        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_profile_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_keyboard_back" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/primaryTextColor" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="editProfile"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            app:srcCompat="@mipmap/ic_profile_placeholder"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="5dp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_profile_professional_info"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Dr. Babasaheb Ambedkar"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_profile_designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:text="chief architect of Indian constitution"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_my_services"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_account"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="My Services"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_profile_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_account"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="Basic Info"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_profile_professional_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_account"
@@ -98,27 +123,47 @@
         android:text="My Addresses"
         android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/primaryTextColor" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_profile_logout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:drawableStart="@drawable/ic_account"
-        android:drawableEnd="@drawable/ic_navigate_next"
-        android:drawablePadding="16dp"
-        android:gravity="center_vertical"
-        android:text="Logout"
-        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/primaryTextColor" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_account"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="Contact Us"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
 
-</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_profile_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_account"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="Logout"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryTextColor" />
+
+    </LinearLayout>
+</ScrollView>

@@ -6,7 +6,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.lb.lawbook.data.ui.gallery.ProfileViewModel
 import com.lb.lawbook.databinding.ActivityProfileProfessionalBinding
 
 class ProfileProfessionalActivity : AppCompatActivity() {
@@ -30,12 +29,12 @@ class ProfileProfessionalActivity : AppCompatActivity() {
         profileViewModel.readDataOwnData().observe(this, Observer {
             if (it != null) {
                 try {
-                    mBinding.editTextProfileYearsExperience.setText(it.get("yr_of_exp").toString())
-                    mBinding.editTextExpertiseField.setText(it.get("expertise_field").toString())
-                    mBinding.editTextProfileNoCases.setText(it.get("no_of_cases").toString())
-                    mBinding.editTextProfileDegree.setText(it.get("degree").toString())
-                    mBinding.editTextProfileBarName.setText(it.get("bar_name").toString())
-                    mBinding.editTextProfileBarRegistrationNo.setText(it.get("bar_reg_no").toString())
+                    mBinding.editTextProfileYearsExperience.setText(it.get("yr_of_exp")?.toString())
+                    mBinding.editTextExpertiseField.setText(it.get("expertise_field")?.toString())
+                    mBinding.editTextProfileNoCases.setText(it.get("no_of_cases")?.toString())
+                    mBinding.editTextProfileDegree.setText(it.get("degree")?.toString())
+                    mBinding.editTextProfileBarName.setText(it.get("bar_name")?.toString())
+                    mBinding.editTextProfileBarRegistrationNo.setText(it.get("bar_reg_no")?.toString())
 
                 } catch (e: Exception) {
                 }

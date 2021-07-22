@@ -6,7 +6,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.lb.lawbook.data.ui.gallery.ProfileViewModel
 import com.lb.lawbook.databinding.ActivityProfileAddressBinding
 
 class ProfileAddressActivity : AppCompatActivity() {
@@ -31,8 +30,8 @@ class ProfileAddressActivity : AppCompatActivity() {
                 try {
                     mBinding.editTextProfileAddressHouseNo.setText(it.get("house_no").toString())
                     mBinding.editTextProfileAddressStreetName.setText(it.get("street")?.toString())
-                    mBinding.editTextProfileAddressCity.setText(it.get("city").toString())
-                    mBinding.editTextProfileAddressPinCode.setText(it.get("pin").toString())
+                    mBinding.editTextProfileAddressCity.setText(it.get("city")?.toString())
+                    mBinding.editTextProfileAddressPinCode.setText(it.get("pin")?.toString())
 
                 } catch (e: Exception) {
                 }

@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LawBook">
-        <activity android:name=".profile.ProfileAddressActivity"></activity>
+        <activity android:name=".profile.services.ServiceDetailsActivity" />
+        <activity android:name=".profile.services.ServiceActivity" />
+        <activity android:name=".profile.ProfileAddressActivity" />
         <activity android:name=".profile.ProfileProfessionalActivity" />
         <activity android:name=".profile.ProfileBasicInfoActivity" />
         <activity android:name=".profile.ProfileActivity" />

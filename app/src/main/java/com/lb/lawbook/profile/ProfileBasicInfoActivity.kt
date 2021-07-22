@@ -6,7 +6,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.lb.lawbook.data.ui.gallery.ProfileViewModel
 import com.lb.lawbook.databinding.ActivityProfileBasicInfoBinding
 
 class ProfileBasicInfoActivity : AppCompatActivity() {
@@ -31,12 +30,12 @@ class ProfileBasicInfoActivity : AppCompatActivity() {
         profileViewModel.readDataOwnData().observe(this, Observer {
             if (it != null) {
                 try {
-                    mBinding.editTextUserName.setText(it.get("user_name").toString())
-                    mBinding.editTextFirstName.setText(it.get("first").toString())
-                    mBinding.editTextLastName.setText(it.get("last").toString())
-                    mBinding.editTextEmail.setText(it.get("email").toString())
-                    mBinding.editTextAge.setText(it.get("age").toString())
-                    mBinding.textViewGender.text = it.get("gender").toString()
+                    mBinding.editTextUserName.setText(it.get("user_name")?.toString())
+                    mBinding.editTextFirstName.setText(it.get("first")?.toString())
+                    mBinding.editTextLastName.setText(it.get("last")?.toString())
+                    mBinding.editTextEmail.setText(it.get("email")?.toString())
+                    mBinding.editTextAge.setText(it.get("age")?.toString())
+                    mBinding.textViewGender.text = it.get("gender")?.toString()
 
                 } catch (e: Exception) {
                 }
