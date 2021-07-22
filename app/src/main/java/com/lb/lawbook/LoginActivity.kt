@@ -15,7 +15,6 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
 import com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks
-import com.lb.lawbook.data.NavigationActivity
 import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
@@ -48,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         if (mAuth.currentUser != null) {
             intent = Intent(this, HomeActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
         } else {
@@ -59,27 +58,27 @@ class LoginActivity : AppCompatActivity() {
             generateOTPBtn = findViewById(R.id.buttonSend)
             linearLayoutVerify = findViewById(R.id.linearLayoutVerify)
             linearLayoutSend = findViewById(R.id.linearLayoutSend)
-            linearLayoutSend.setVisibility(View.VISIBLE)
-            linearLayoutVerify.setVisibility(View.INVISIBLE)
+            linearLayoutSend.visibility = View.VISIBLE
+            linearLayoutVerify.visibility = View.INVISIBLE
 
             // setting onclick listner for generate OTP button.
             generateOTPBtn.setOnClickListener(View.OnClickListener {
                 // below line is for checking weather the user
                 // has entered his mobile number or not.
-                if (TextUtils.isEmpty(edtPhone.getText().toString())) {
+                if (TextUtils.isEmpty(edtPhone.text.toString())) {
                     // when mobile number text field is empty
                     // displaying a toast message.
                     Toast.makeText(
-                        this@LoginActivity,
-                        "Please enter a valid phone number.",
-                        Toast.LENGTH_SHORT
+                            this@LoginActivity,
+                            "Please enter a valid phone number.",
+                            Toast.LENGTH_SHORT
                     ).show()
                 } else {
                     // if the text field is not empty we are calling our
                     // send OTP method for getting OTP from Firebase.
-                    linearLayoutSend.setVisibility(View.INVISIBLE)
-                    linearLayoutVerify.setVisibility(View.VISIBLE)
-                    val phone = "+91" + edtPhone.getText().toString()
+                    linearLayoutSend.visibility = View.INVISIBLE
+                    linearLayoutVerify.visibility = View.VISIBLE
+                    val phone = "+91" + edtPhone.text.toString()
                     sendVerificationCode(phone)
                 }
             })
@@ -88,15 +87,15 @@ class LoginActivity : AppCompatActivity() {
             // for verify otp button
             verifyOTPBtn.setOnClickListener(View.OnClickListener {
                 // validating if the OTP text field is empty or not.
-                if (TextUtils.isEmpty(edtOTP.getText().toString())) {
+                if (TextUtils.isEmpty(edtOTP.text.toString())) {
                     // if the OTP text field is empty display
                     // a message to user to enter OTP
                     Toast.makeText(this@LoginActivity, "Please enter OTP", Toast.LENGTH_SHORT)
-                        .show()
+                            .show()
                 } else {
                     // if OTP field is not empty calling
                     // method to verify the OTP.
-                    verifyCode(edtOTP.getText().toString())
+                    verifyCode(edtOTP.text.toString())
                 }
             })
         }
@@ -173,7 +172,7 @@ class LoginActivity : AppCompatActivity() {
                     // if the code is correct and the task is successful
                     // we are sending our user to new activity.
                     val i = Intent(this@LoginActivity, HomeActivity::class.java)
-                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                     startActivity(i)
                     finish()
                 } else {

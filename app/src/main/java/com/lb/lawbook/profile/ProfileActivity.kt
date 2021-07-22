@@ -13,10 +13,13 @@ import com.bumptech.glide.Glide
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import com.lb.lawbook.LoginActivity
 import com.lb.lawbook.R
 import com.lb.lawbook.databinding.ActivityProfileBinding
 import com.lb.lawbook.profile.services.ServiceActivity
@@ -83,9 +86,18 @@ class ProfileActivity : AppCompatActivity() {
             )
         }
 
+        mBinding.textViewProfileLogout.setOnClickListener {
+            if (auth != null) {
+                Firebase.auth.signOut()
+                Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(intent)
+            }
+        }
+
         mBinding.textViewContactUs.setOnClickListener {
             val emailList = "abdulhamidreza@gmail.com" //todo need to change
-            val subject = "Lawyer Quary | Android | " + auth?.uid + " | " + auth?.phoneNumber + " | " + auth?.displayName
+            val subject = "Lawyer Quary | Android | " + auth?.uid + " | " + auth?.phoneNumber
             composeEmail(arrayOf(emailList), subject)
         }
 

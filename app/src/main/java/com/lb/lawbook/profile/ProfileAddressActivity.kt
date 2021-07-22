@@ -28,7 +28,7 @@ class ProfileAddressActivity : AppCompatActivity() {
         profileViewModel.readDataOwnData().observe(this, Observer {
             if (it != null) {
                 try {
-                    mBinding.editTextProfileAddressHouseNo.setText(it.get("house_no").toString())
+                    mBinding.editTextProfileAddressHouseNo.setText(it.get("house_no")?.toString())
                     mBinding.editTextProfileAddressStreetName.setText(it.get("street")?.toString())
                     mBinding.editTextProfileAddressCity.setText(it.get("city")?.toString())
                     mBinding.editTextProfileAddressPinCode.setText(it.get("pin")?.toString())
