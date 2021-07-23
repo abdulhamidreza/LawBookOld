@@ -23,8 +23,7 @@ import com.lb.lawbook.LoginActivity
 import com.lb.lawbook.R
 import com.lb.lawbook.databinding.ActivityProfileBinding
 import com.lb.lawbook.profile.services.ServiceActivity
-import kotlinx.android.synthetic.main.nav_header_main.*
-import kotlinx.android.synthetic.main.nav_header_main.view.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import java.io.IOException
 import java.util.*
 
