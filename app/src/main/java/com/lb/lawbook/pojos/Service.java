@@ -1,11 +1,14 @@
 package com.lb.lawbook.pojos;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class Service {
     private String location;
     private String service_type;
-    private String modes;
+    private HashMap modes;
     private String exp;
-    private String lang;
+    private List<String> lang;
     private String docId;
 
     public String getLocation() {
@@ -16,12 +19,20 @@ public class Service {
         this.location = location;
     }
 
-    public String getLang() {
+    public List<String> getLang() {
         return lang;
     }
 
-    public void setLang(String lang) {
+    public void setLang(List<String> lang) {
         this.lang = lang;
+    }
+
+    public HashMap getModes() {
+        return modes;
+    }
+
+    public void setModes(HashMap modes) {
+        this.modes = modes;
     }
 
     public String getDocId() {
@@ -48,14 +59,6 @@ public class Service {
         this.service_type = service_type;
     }
 
-    public String getModes() {
-        return modes;
-    }
-
-    public void setModes(String modes) {
-        this.modes = modes;
-    }
-
     public String getExp() {
         return exp;
     }
@@ -64,11 +67,4 @@ public class Service {
         this.exp = exp;
     }
 
-    public String getLanguages() {
-        return lang;
-    }
-
-    public void setLanguages(String lang) {
-        this.lang = lang;
-    }
 }

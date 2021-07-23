@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:background="@color/primaryColor"
         android:orientation="vertical"
@@ -15,45 +15,105 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/item_service_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Id"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
-        <TextView
             android:id="@+id/item_service_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:layout_marginStart="16dp"
             android:text="Name"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_service_name_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="NA"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toEndOf="@+id/item_service_name"
+            app:layout_constraintTop_toTopOf="@+id/item_service_name" />
 
         <TextView
             android:id="@+id/item_service_locations"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
             android:text="Locations"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toStartOf="@+id/item_service_name"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_name" />
 
         <TextView
-            android:id="@+id/item_service_pricing"
+            android:id="@+id/item_service_locations_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Pricing"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:layout_marginLeft="16dp"
+            android:text="NA"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toEndOf="@+id/item_service_locations"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_name" />
 
         <TextView
-            android:id="@+id/item_service_updated_date"
+            android:id="@+id/item_service_languages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Last Updated"
-            android:textAppearance="?attr/textAppearanceListItem" />
-    </LinearLayout>
+            android:text="Languages"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toStartOf="@+id/item_service_locations"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_locations" />
+
+        <TextView
+            android:id="@+id/item_service_languages_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toEndOf="@+id/item_service_languages"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_locations" />
+
+        <TextView
+            android:id="@+id/item_service_yxp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of Exp in this Field"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toStartOf="@+id/item_service_locations"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_languages" />
+
+        <TextView
+            android:id="@+id/item_service_yxp_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="NA"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toEndOf="@+id/item_service_yxp"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_languages" />
+
+
+        <TextView
+            android:id="@+id/item_service_modes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modes"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toStartOf="@+id/item_service_locations"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_yxp" />
+
+        <TextView
+            android:id="@+id/item_service_modes_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="NA"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintStart_toEndOf="@+id/item_service_modes"
+            app:layout_constraintTop_toBottomOf="@+id/item_service_yxp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/edit_service_imageView"

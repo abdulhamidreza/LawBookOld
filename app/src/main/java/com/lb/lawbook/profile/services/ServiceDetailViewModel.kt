@@ -38,11 +38,11 @@ class ServiceDetailViewModel : ViewModel() {
                     var result = ArrayList<Service>()
                     if (task.isSuccessful) {
                         for (document in task.result!!) {
-                            var add: Service = Service()
+                            var add = Service()
                             add.exp = document.data.get("exp").toString()
-                            add.languages = document.data.get("languages").toString()
-                            add.locations = document.data.get("locations").toString()
-                            add.modes = document.data.get("modes").toString()
+                            add.lang = document.data.get("languages") as List<String>
+                            add.locations = document.data.get("location").toString()
+                            add.modes = document.data.get("modes") as HashMap<*, *>
                             add.service_type = document.data.get("service_type").toString()
                             add.docId = document.id
                             result.add(add)
@@ -56,6 +56,29 @@ class ServiceDetailViewModel : ViewModel() {
 
     fun readServicesData(): MutableLiveData<ArrayList<Service>> {
         return servicesLiveData
+    }
+
+
+    fun readOneServiceData(docId: String): MutableLiveData<Service> {
+        return MutableLiveData<Service>().apply {
+            db.collection("service_points")
+                    .document(docId)
+                    .get()
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            var add = Service()
+                            add.exp = task.result?.data?.get("exp").toString()
+                            add.lang = task.result?.data?.get("languages") as List<String>
+                            add.locations = task.result?.data?.get("location").toString()
+                            add.modes = task.result?.data?.get("modes") as HashMap<*, *>
+                            add.service_type = task.result?.data?.get("service_type").toString()
+                            add.docId = task.result?.id
+                            value = add
+                        } else {
+                            Log.w(TAG, "Error getting document.", task.exception)
+                        }
+                    }
+        }
     }
 
 }

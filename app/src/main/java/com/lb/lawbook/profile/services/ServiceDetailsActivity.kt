@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lb.lawbook.databinding.ActivityServiceDetailBinding
+import com.lb.lawbook.pojos.Service
 import kotlinx.android.synthetic.main.activity_service_detail.*
 
 class ServiceDetailsActivity : AppCompatActivity() {
@@ -21,9 +22,11 @@ class ServiceDetailsActivity : AppCompatActivity() {
     val auth = FirebaseAuth.getInstance().currentUser
 
     private var arrayChecked: ArrayList<Boolean> = ArrayList()
+    private lateinit var serviceEdit: Service
 
     private var locationSelected: String = ""
     private var serviceTypeSelected: String = ""
+    private var docIdEdit: String = ""
     private lateinit var languagesSelected: ArrayList<String>
 
     private lateinit var mBinding: ActivityServiceDetailBinding
@@ -31,6 +34,7 @@ class ServiceDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityServiceDetailBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        docIdEdit = intent.extras?.get("docIdEdit").toString()
 
         mBinding.buttonServicesDetailsInfoBack.setOnClickListener {
             onBackPressed()
@@ -39,6 +43,11 @@ class ServiceDetailsActivity : AppCompatActivity() {
         serviceDetailViewModel =
                 ViewModelProvider(this).get(ServiceDetailViewModel::class.java)
 
+        if (!docIdEdit.equals("")) {
+            serviceDetailViewModel.readOneServiceData(docIdEdit).observe(this, Observer {
+                serviceEdit = it
+            })
+        }
         serviceDetailViewModel.readServiceMetaData().observe(this, Observer {
             selectLocation(it.get("locations") as ArrayList<String>)
             selectLanguages(it.get("languages") as ArrayList<String>)
@@ -79,7 +88,8 @@ class ServiceDetailsActivity : AppCompatActivity() {
     }
 
     private fun selectLocation(arrayLocation: ArrayList<String>) {
-        searchable_location_spinnerView.adapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item, arrayLocation)
+        var adapterArray = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item, arrayLocation)
+        searchable_location_spinnerView.adapter = adapterArray
         searchable_location_spinnerView.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 //Nothing selected

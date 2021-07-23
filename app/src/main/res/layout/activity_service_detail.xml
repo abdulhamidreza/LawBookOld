@@ -17,19 +17,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_gravity="fill_horizontal"
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
+            android:textSize="22sp"
             android:layout_height="wrap_content"
             android:text="Service Name" />
 
         <com.toptoche.searchablespinnerlibrary.SearchableSpinner
             android:id="@+id/searchable_service_spinnerView"
             android:layout_width="wrap_content"
+            android:textSize="22sp"
             android:layout_height="wrap_content"
             app:hintText="Select from list" />
 
@@ -44,12 +46,14 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="22sp"
             android:text="Location" />
 
         <com.toptoche.searchablespinnerlibrary.SearchableSpinner
             android:id="@+id/searchable_location_spinnerView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="22sp"
             app:hintText="Select from list" />
     </LinearLayout>
 
@@ -67,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Mode"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,8 +79,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
+            android:textSize="22sp"
             android:text="Call"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -85,12 +90,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
+            android:textSize="22sp"
             android:text="Visit"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView3"
+            android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="108dp"
@@ -173,8 +180,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:drawablePadding="100dp"
             android:drawableEnd="@android:drawable/arrow_down_float"
-            android:drawablePadding="10dp"
+            android:textSize="24sp"
             android:hint="Select Languages"
             android:paddingEnd="6dp" />
 
@@ -197,6 +205,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:textSize="22sp"
             android:text="Year of Exp In this field" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -214,7 +223,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="Save" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_service_details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Cancel" />
+
 
 </LinearLayout>
