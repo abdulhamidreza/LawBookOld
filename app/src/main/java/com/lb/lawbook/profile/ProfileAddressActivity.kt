@@ -46,16 +46,16 @@ class ProfileAddressActivity : AppCompatActivity() {
     }
 
     fun insertUserDocument() {
-        val houseNo = mBinding.editTextProfileAddressHouseNo.text
-        val street = mBinding.editTextProfileAddressStreetName.text
-        val city = mBinding.editTextProfileAddressCity.text
-        val pin = mBinding.editTextProfileAddressPinCode.text
+        val houseNo = mBinding.editTextProfileAddressHouseNo.text.toString()
+        val street = mBinding.editTextProfileAddressStreetName.text.toString()
+        val city = mBinding.editTextProfileAddressCity.text.toString()
+        val pin = mBinding.editTextProfileAddressPinCode.text.toString()
 
         val basicInfo: MutableMap<String, Any> = HashMap()
-        basicInfo.put("house_no", houseNo!!)
-        basicInfo.put("street", street!!)
-        basicInfo.put("city", city!!)
-        basicInfo.put("pin", pin!!)
+        basicInfo.put("house_no", houseNo)
+        basicInfo.put("street", street)
+        basicInfo.put("city", city)
+        basicInfo.put("pin", pin)
         val documentRef = db.collection("users").document(auth?.uid.toString())
         documentRef.set(basicInfo)
     }

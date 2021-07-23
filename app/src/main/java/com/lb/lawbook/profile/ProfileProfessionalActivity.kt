@@ -49,20 +49,20 @@ class ProfileProfessionalActivity : AppCompatActivity() {
     }
 
     fun insertUserDocument() {
-        val yearOfExp = mBinding.editTextProfileYearsExperience.text
-        val expFiled = mBinding.editTextExpertiseField.text
-        val noCases = mBinding.editTextProfileNoCases.text
-        val degree = mBinding.editTextProfileDegree.text
-        val barName = mBinding.editTextProfileBarName.text
-        val barRegNo = mBinding.editTextProfileBarRegistrationNo.text
+        val yearOfExp = mBinding.editTextProfileYearsExperience.text.toString()
+        val expFiled = mBinding.editTextExpertiseField.text.toString()
+        val noCases = mBinding.editTextProfileNoCases.text.toString()
+        val degree = mBinding.editTextProfileDegree.text.toString()
+        val barName = mBinding.editTextProfileBarName.text.toString()
+        val barRegNo = mBinding.editTextProfileBarRegistrationNo.text.toString()
 
         val basicInfo: MutableMap<String, Any> = HashMap()
-        basicInfo.put("yr_of_exp", yearOfExp!!)
-        basicInfo.put("expertise_field", expFiled!!)
-        basicInfo.put("no_of_cases", noCases!!)
-        basicInfo.put("degree", degree!!)
-        basicInfo.put("bar_name", barName!!)
-        basicInfo.put("bar_reg_no", barRegNo!!)
+        basicInfo.put("yr_of_exp", yearOfExp)
+        basicInfo.put("expertise_field", expFiled)
+        basicInfo.put("no_of_cases", noCases)
+        basicInfo.put("degree", degree)
+        basicInfo.put("bar_name", barName)
+        basicInfo.put("bar_reg_no", barRegNo)
         val documentRef = db.collection("users").document(auth?.uid.toString())
         documentRef.set(basicInfo)
     }
