@@ -9,17 +9,20 @@ import com.lb.lawbook.profile.ProfileActivity
 
 class HomeActivity : AppCompatActivity() {
 
+    var text = arrayOf("Sign Up with Us", "We will be live soon", getImoji())
     private lateinit var mHomeBinding: ActivityHomeBinding
     val auth = FirebaseAuth.getInstance().currentUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mHomeBinding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(mHomeBinding.root)
+
+        mHomeBinding.fadingText.setTexts(text)
         mHomeBinding.layoutHomeProfile.buttonHomeBottomProfile.setOnClickListener {
             startActivity(
-                    Intent(
-                            this@HomeActivity, ProfileActivity::class.java
-                    )
+                Intent(
+                    this@HomeActivity, ProfileActivity::class.java
+                )
             )
         }
 
@@ -33,4 +36,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    private fun getImoji(): String {
+        // Emoji https://apps.timwhitlock.info/emoji/tables/unicode
+        var unicode = 0x1F680 //rocket
+        return String(Character.toChars(unicode))
+    }
+
 }
