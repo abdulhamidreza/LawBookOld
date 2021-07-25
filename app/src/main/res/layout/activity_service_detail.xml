@@ -175,10 +175,10 @@
         android:layout_marginTop="18dp"
         android:orientation="vertical">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/languages_TextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="left"
             android:drawablePadding="100dp"
             android:drawableEnd="@android:drawable/arrow_down_float"
@@ -186,7 +186,7 @@
             android:hint="Select Languages"
             android:paddingEnd="6dp" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/lang_list_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,6 +223,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/primaryColor"
         android:layout_marginTop="20dp"
         android:text="Save" />
 
@@ -231,6 +232,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/primaryColor"
         android:layout_marginTop="20dp"
         android:text="Cancel" />
 

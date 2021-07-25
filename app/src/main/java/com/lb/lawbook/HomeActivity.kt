@@ -1,11 +1,16 @@
 package com.lb.lawbook
 
 import android.content.Intent
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.lb.lawbook.databinding.ActivityHomeBinding
 import com.lb.lawbook.profile.ProfileActivity
+import kotlinx.android.synthetic.main.activity_home.*
+import java.util.*
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -25,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
                 )
             )
         }
-
     }
 
     override fun onStart() {
@@ -37,10 +41,23 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        playVideo()
+    }
+
     private fun getImoji(): String {
         // Emoji https://apps.timwhitlock.info/emoji/tables/unicode
         var unicode = 0x1F680 //rocket
         return String(Character.toChars(unicode))
     }
 
+    private fun playVideo() {
+        videoWait.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.wait_anim))
+        videoWait.setOnPreparedListener(MediaPlayer.OnPreparedListener {
+            it.isLooping = true
+        })
+        videoWait.start()
+
+    }
 }

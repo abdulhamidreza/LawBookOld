@@ -7,11 +7,18 @@
     android:orientation="vertical"
     tools:context=".HomeActivity">
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:orientation="vertical">
+
+        <VideoView
+            android:id="@+id/videoWait"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <com.tomer.fadingtextview.FadingTextView
             android:id="@+id/fadingText"
@@ -25,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:timeout="1500" />
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
         android:id="@+id/layout_home_profile"
