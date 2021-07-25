@@ -95,7 +95,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         mBinding.textViewContactUs.setOnClickListener {
-            val emailList = "abdulhamidreza@gmail.com" //todo need to change
+            val emailList = "lawbookinindia@gmail.com" //todo need to change
             val subject = "Lawyer Quary | Android | " + auth?.uid + " | " + auth?.phoneNumber
             composeEmail(arrayOf(emailList), subject)
         }
