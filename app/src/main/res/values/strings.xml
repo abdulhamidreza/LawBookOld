@@ -4,5 +4,7 @@
     <string name="info_login_caption_header">We need to send OTP to authenticate your number</string>
     <string name="hint_mobile_number">Mobile Number</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="pref_speakerphone_key">speakerphone_preference</string>
+    <string name="pref_speakerphone_default">auto</string>
+
 </resources>
